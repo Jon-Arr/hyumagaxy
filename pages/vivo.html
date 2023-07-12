@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Programa radial de Hyumagaxy Discotheque con musica en vivo por DJ Hyumagaxy">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>HYUMAGAXY DJ - EN VIVO</title>
+</head>
+
+<body>
+    <header>
+        <div class="titulo">
+            <marquee direction="alternate">
+                <h1>BIENVENIDOS A HYUMAGAXY DISCOTHEQUE</h1>
+            </marquee>
+        </div>
+        <div class="menu-contenedor">
+            <div class="menu-cont">
+                <i class="bi bi-list" id="menuAbrir" onclick="menu()"></i>
+                <i class="bi bi-x-lg" id="menuCerrar" onclick="menuoff()"></i>
+                <div id="menu-open">
+                    <ul>
+                        <p>MENU</p>
+                        <hr>
+                        <a href="../index.html">
+                            <li>Página principal</li>
+                        </a>
+                        <a href="radio.html">
+                            <li>RADIO ONLINE</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-rrss">
+                <a href="https://www.facebook.com/Alex.Hyumagaxy" target="_blank">
+                    <i class="bi bi-facebook rs rs-fb"></i>
+                </a>
+                <a href="https://www.instagram.com/sevenescorp/" target="_blank">
+                    <i class="bi bi-instagram rs rs-inst"></i>
+                </a>
+                <a href="https://wa.me/+56984581664/?text=Hola%20DJHumagaxy" target="_blank">
+                    <i class="bi bi-whatsapp rs rs-wsp"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="cont-section2">
+            <h2>EN VIVO</h2>
+            <p>Todos los fines de semana a las 22:00hrs</p>
+            <div class="vivo">
+                <video src="../img/alex/vid1.mp4" autoplay muted loop></video>
+                <audio src="http://us5freenew.listen2myradio.com:27352/;" autoplay controls>EN VIVO</audio>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <ul class="cont-box">
+            <marquee behavior="alternate" direction="" loop="infinite" width="80%" SCROLLAMOUNT=3
+                onmouseout="this.start()" onmouseover="this.stop()">
+                <li class="box"></li>
+                <li class="box"><a href="https://emebus.cl/" target="_blank"><img src="../img/aus/aus1.jpg"
+                            alt="EME BUS"></a></li>
+                <li class="box"><a href="https://radiouniversal.cl/" target="_blank"><img src="../img/aus/aus2.jpg"
+                            alt="RADIO UNIVERSAL"></a></li>
+                <li class="box"><a href="https://www.instagram.com/carolina.novedades.pitrufquen/?hl=es"
+                        target="_blank"><img src="../img/aus/aus3.jpg" alt="CAROLINA NOVEDADES"></a></li>
+                <li class="box"><a href="https://www.jetsur.cl/" target="_blank"><img src="../img/aus/aus4.1.jpg"
+                            alt="JET SUR"></a></li>
+                <li class="box"><a href="https://djschool.org/" target="_blank"><img src="../img/aus/aus5.1.jpg"
+                            alt="DJ SCHOOL"></a></li>
+                <li class="box"><a href="https://ww2.copec.cl/personas" target="_blank"><img src="../img/aus/aus6.1.jpg"
+                            alt="COPEC"></a></li>
+                <li class="box"><a href="https://www.todoletrastemuco.cl/" target="_blank"><img
+                            src="../img/aus/aus7.1.jpg" alt="TODO LETRAS TEMUCO"></a></li>
+                <li class="box"></li>
+            </marquee>
+        </ul>
+
+        <hr>
+
+        <h3>Contacto:</h3>
+        <div class="rs-foot">
+            <a href="https://www.facebook.com/Alex.Hyumagaxy" target="_blank">
+                <i class="bi bi-facebook foot-ico foot-fb">Alex.Hyumagaxy</i>
+            </a>
+            <a href="https://www.instagram.com/sevenescorp/" target="_blank">
+                <i class="bi bi-instagram foot-ico foot-inst">Sevenescorp</i>
+            </a>
+            <a href="https://wa.me/+56984581664/?text=Hola%20DJHumagaxy" target="_blank">
+                <i class="bi bi-whatsapp foot-ico foot-wsp">+56984581664</i>
+            </a>
+        </div>
+        <h4>Santiago, Chile 2023</h4>
+        <hr>
+        <h4>®HYUMAGAXY Marca Registrada</h4>
+    </footer>
+
+    <script type="text/javascript">
+        function menu() {
+            document.getElementById("menuAbrir").style.display = "none";
+            document.getElementById("menuCerrar").style.display = "inline";
+            document.getElementById("menu-open").style.display = "inline";
+            document.getElementById("menu-open").style.transition = "all 1s";
+        }
+        function menuoff() {
+            document.getElementById("menuAbrir").style.display = "inline";
+            document.getElementById("menuCerrar").style.display = "none";
+            document.getElementById("menu-open").style.transition = "all 1s";
+            document.getElementById("menu-open").style.display = "none";
+        }
+
+    </script>
+
+</body>
+
+</html>

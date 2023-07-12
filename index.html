@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bienvenidos a Hyumagaxy Discotheque en donde encontraran el mejor contenido musical con DJ Hyumagaxy">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>HYUMAGAXY DJ - DISCOTHEQUE</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="titulo">
+            <marquee direction="alternate">
+                <h1>BIENVENIDOS A HYUMAGAXY DISCOTHEQUE</h1>
+            </marquee>
+        </div>
+        <div class="menu-contenedor">
+            <div class="menu-cont">
+                <i class="bi bi-list" id="menuAbrir" onclick="menu()"></i>
+                <i class="bi bi-x-lg" id="menuCerrar" onclick="menuoff()"></i>
+                <div id="menu-open">
+                    <ul>
+                        <p>MENU</p>
+                        <hr>
+                        <a href="./pages/radio.html">
+                            <li>RADIO ONLINE</li>
+                        </a>
+                        <a href="./pages/vivo.html">
+                            <li>TRANSMISION EN VIVO</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-rrss">
+                <a href="https://www.facebook.com/Alex.Hyumagaxy" target="_blank">
+                    <i class="bi bi-facebook rs rs-fb"></i>
+                </a>
+                <a href="https://www.instagram.com/sevenescorp/" target="_blank">
+                    <i class="bi bi-instagram rs rs-inst"></i>
+                </a>
+                <a href="https://wa.me/+56984581664/?text=Hola%20DJHumagaxy" target="_blank">
+                    <i class="bi bi-whatsapp rs rs-wsp"></i>
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <section class="cont-section">
+            <div class="mutear">
+                <a href="#" onclick="mutear()"><i class="bi bi-volume-up-fill" id="mute1"></i></a>
+                <a href="#" onclick="desmutear()"><i class="bi bi-volume-mute-fill" id="mute2"></i></a>
+            </div>
+            <div class="boton">
+                <a class="text" href="./pages/radio.html">
+                    <p>RADIO ONLINE</p>
+                </a>
+                <a class="text" href="./pages/vivo.html">
+                    <p>TRANSMISION EN VIVO</p>
+                </a>
+            </div>
+
+            <div class="slider-container">
+                <div class="slider position"></div>
+            </div>
+        </section>
+
+    </main>
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Todos los fines de semana a las 22:00hrs</p>
+            <video src="./img/alex/vid1.mp4" alt="modal" autoplay muted loop></video>
+        </div>
+    </section>
+
+    <footer>
+        <ul class="cont-box">
+            <marquee behavior="alternate" direction="" loop="infinite" width="80%" SCROLLAMOUNT=3
+                onmouseout="this.start()" onmouseover="this.stop()">
+                <li class="box"></li>
+                <li class="box"><a href="https://emebus.cl/" target="_blank"><img src="./img/aus/aus1.jpg"
+                            alt="EME BUS"></a></li>
+                <li class="box"><a href="https://radiouniversal.cl/" target="_blank"><img src="./img/aus/aus2.jpg"
+                            alt="RADIO UNIVERSAL"></a></li>
+                <li class="box"><a href="https://www.instagram.com/carolina.novedades.pitrufquen/?hl=es"
+                        target="_blank"><img src="./img/aus/aus3.jpg" alt="CAROLINA NOVEDADES"></a></li>
+                <li class="box"><a href="https://www.jetsur.cl/" target="_blank"><img src="./img/aus/aus4.1.jpg"
+                            alt="JET SUR"></a></li>
+                <li class="box"><a href="https://djschool.org/" target="_blank"><img src="./img/aus/aus5.1.jpg"
+                            alt="DJ SCHOOL"></a></li>
+                <li class="box"><a href="https://ww2.copec.cl/personas" target="_blank"><img src="./img/aus/aus6.1.jpg"
+                            alt="COPEC"></a></li>
+                <li class="box"><a href="https://www.todoletrastemuco.cl/" target="_blank"><img
+                            src="./img/aus/aus7.1.jpg" alt="TODO LETRAS TEMUCO"></a></li>
+                <li class="box"></li>
+            </marquee>
+        </ul>
+
+        <hr>
+
+        <h3>Contacto:</h3>
+        <div class="rs-foot">
+            <a href="https://www.facebook.com/Alex.Hyumagaxy" target="_blank">
+                <i class="bi bi-facebook foot-ico foot-fb">Alex.Hyumagaxy</i>
+            </a>
+            <a href="https://www.instagram.com/sevenescorp/" target="_blank">
+                <i class="bi bi-instagram foot-ico foot-inst">Sevenescorp</i>
+            </a>
+            <a href="https://wa.me/+56984581664/?text=Hola%20DJHumagaxy" target="_blank">
+                <i class="bi bi-whatsapp foot-ico foot-wsp">+56984581664</i>
+            </a>
+        </div>
+        <h4>Santiago, Chile 2023</h4>
+        <hr>
+        <h4 class="marca">®HYUMAGAXY Marca Registrada</h4>
+    </footer>
+
+    <script type="text/javascript">
+        var audio = new Audio('./msk/msk5.mp3');
+        function menu() {
+            document.getElementById("menuAbrir").style.display = "none";
+            document.getElementById("menuCerrar").style.display = "inline";
+            document.getElementById("menu-open").style.display = "inline";
+            document.getElementById("menu-open").style.transition = "all 1s";
+        }
+        function menuoff() {
+            document.getElementById("menuAbrir").style.display = "inline";
+            document.getElementById("menuCerrar").style.display = "none";
+            document.getElementById("menu-open").style.transition = "all 1s";
+            document.getElementById("menu-open").style.display = "none";
+        }
+
+        //MODAL***********************
+        var modal = document.getElementById("myModal");
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function (event) {
+            modal.style.display = "none";
+            audio.volume = 0.1;
+            audio.play();
+            audio.loop(INFINITY);            
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                audio.volume = 0.1;
+                audio.play();
+                audio.loop();
+            }
+        }
+
+        function mutear() {
+            document.getElementById("mute1").style.display = "none";
+            document.getElementById("mute2").style.display = "inline";
+            audio.volume = 0.0;
+        }
+        function desmutear() {
+            document.getElementById("mute2").style.display = "none";
+            document.getElementById("mute1").style.display = "inline";
+            audio.volume = 0.1;
+        }
+
+    </script>
+
+</body>
+
+</html>
